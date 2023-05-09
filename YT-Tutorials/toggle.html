@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Button Animation</title>
+    <style>
+      #checkbox {
+        display: none;
+      }
+
+      .toggler {
+        display: block;
+        width: 60px;
+        height: 31px;
+        border: 2px solid #4672fe;
+        border-radius: 30px;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .ball,
+      .sun,
+      .moon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .ball {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background-color: #4672fe;
+        border-radius: 50%;
+        left: 1px;
+        z-index: 10;
+        transition: transform .5s ease-in-out;
+      }
+
+      .sun {
+        left: 5px;
+      }
+
+      .moon {
+        right: 5px;
+      }
+
+      #checkbox:checked + .ball {
+        transform: translate(29px, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <label for="checkbox" class="toggler">
+      <input type="checkbox" id="checkbox">
+      <span class="ball"></span>
+      <i class="ri-sun-line sun"></i>
+      <i class="ri-moon-line moon"></i>
+    </label>
+  </body>
+</html>
