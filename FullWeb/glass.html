@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frosted Glass</title>
+    <style>
+      body, main::before {
+        background: url("https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/glass-effect-html-css/pexels-valiphotos-589841%20%281%29.jpg") 0 / cover fixed;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      main {
+        width: 20rem;
+        height: 15rem;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;
+        background: inherit;
+        overflow: hidden;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 42px;
+      }
+
+      main::before {
+        content: "";
+        position: absolute;
+        background: inherit;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+        filter: blur(10px);
+        margin: -20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <blockquote>
+        I have no talent at all. I am only passionate about understanding.
+        <footer>
+          -<cite>Albert Einstein</cite>
+        </footer>
+      </blockquote>
+    </main>
+  </body>
+</html>
