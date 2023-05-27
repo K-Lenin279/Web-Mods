@@ -96,6 +96,17 @@ header .nav-bar .btnLogin-Popup:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform .5s ease, height .2s ease;
+}
+
+.wrapper.active-popup {
+  transform: scale(1);
+}
+
+.wrapper.active {
+  height: 520px;
 }
 
 .wrapper .form-box {
@@ -103,13 +114,51 @@ header .nav-bar .btnLogin-Popup:hover {
   padding: 40px;
 }
 
-.wrapper .form-box h2 {
+.wrapper .form-box.login {
+  transition: transform .18s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+  transition: transform .18s ease;
+  transform: translateX(0);
+}
+
+.wrapper .icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: #162938;
+  font-size: 2em;
+  color: #fff;
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.form-box h2 {
   font-size: 2em;
   color: #162938;
   text-align: center;
 }
 
-.wrapper .input-box {
+.input-box {
   position: relative;
   width: 100%;
   height: 50px;
@@ -117,7 +166,7 @@ header .nav-bar .btnLogin-Popup:hover {
   margin: 30px 0;
 }
 
-.wrapper .input-box label {
+.input-box label {
   position: absolute;
   top: 50%;
   left: 5px;
@@ -129,12 +178,12 @@ header .nav-bar .btnLogin-Popup:hover {
   transition: .5s;
 }
 
-.wrapper .input-box input:focus~label,
-.wrapper .input-box input:valid~label {
+.input-box input:focus~label,
+.input-box input:valid~label {
   top: -5px;
 }
 
-.wrapper .input-box input {
+.input-box input {
   width: 100%;
   height: 100%;
   background: transparent;
@@ -143,7 +192,7 @@ header .nav-bar .btnLogin-Popup:hover {
   padding: 0 35px 0 5px;
 }
 
-.wrapper .input-box .icon {
+.input-box .icon {
   position: absolute;
   right: 8px;
   font-size: 1.2em;
@@ -151,7 +200,7 @@ header .nav-bar .btnLogin-Popup:hover {
   line-height: 57px;
 }
 
-.wrapper .remember-forgot {
+.remember-forgot {
   font-size: .9em;
   color: #162938;
   font-weight: 500;
@@ -160,21 +209,21 @@ header .nav-bar .btnLogin-Popup:hover {
   justify-content: space-between;
 }
 
-.wrapper .remember-forgot input {
+.remember-forgot input {
   accent-color: #162938;
   margin-right: 3px;
 }
 
-.wrapper .remember-forgot a {
+.remember-forgot a {
   color: #162938;
   text-decoration: none;
 }
 
-.wrapper .remember-forgot a:hover {
+.remember-forgot a:hover {
   text-decoration: underline;
 }
 
-.wrapper .btn {
+.btn {
   width: 100%;
   height: 45px;
   background: #162938;
@@ -187,19 +236,19 @@ header .nav-bar .btnLogin-Popup:hover {
   cursor: pointer;
 }
 
-.wrapper .login-register {
+.login-register {
   color: #162938;
   font-size: .9em;
   text-align: center;
   margin: 25px 0 10px;
 }
 
-.wrapper .login-register p a {
+.login-register p a {
   color: #162938;
   text-decoration: none;
   font-weight: 600;
 }
 
-.wrapper .login-register p a:hover {
+.login-register p a:hover {
   text-decoration: underline;
 }
