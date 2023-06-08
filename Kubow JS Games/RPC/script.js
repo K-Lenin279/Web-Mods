@@ -12,6 +12,7 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
   /*userChoiceDisplay.style.fontSize = '2em';
   userChoiceDisplay.style.textTransform = 'uppercase';
   userChoiceDisplay.style.textAlign = 'center';*/
+  userChoiceDisplay.style.color = '#f33311';
   generateComputerChoice();
   getResult();
 }));
@@ -27,6 +28,7 @@ function generateComputerChoice() {
     compChoice = 'paper';
   }
   
+  compChoiceDisplay.style.color = '#81dc05';
   compChoiceDisplay.innerHTML = compChoice;
 }
 
@@ -47,5 +49,6 @@ function getResult() {
     result = 'You lose!';
   }
 
+  resultDisplay.style.color = '#05a6f1';
   resultDisplay.innerHTML = result;
 }
