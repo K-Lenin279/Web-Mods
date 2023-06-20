@@ -1,4 +1,4 @@
-#These are image addresses to try.
+# These are image addresses to try.
 
 https://img.freepik.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg?size=626&ext=jpg
 
@@ -17,3 +17,8 @@ https://t4.ftcdn.net/jpg/02/82/44/61/240_F_282446155_qsSedXYDbiB3Unw5LElZePbDvUh
 https://cdn.pixabay.com/photo/2017/06/21/07/33/background-2426328_640.jpg
 
 https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIqL3WqxFnEyf5oW_kpyUnYAQD5HEcXJpN5w&usqp=CAU
+
+# Purpose
+
+These are background images I found interesting.
+I own nothing of any of these, just a fun share.
